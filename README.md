@@ -11,7 +11,7 @@ This is a sample nightwatch project to run your functional tests programmaticall
 
 * Install node via `brew install node` Or download [Node.js](https://nodejs.org/en/download/)
 
-* Do  `git clone https://github.com/NageshJoy007/nightwatch-poc.git` Or `git clone`
+* Do  `git clone https://github.com/NageshJoy007/nightwatch-poc.git`
 
 * To download required node_modules specified in [package.json](./package.json)  `npm install`
 
