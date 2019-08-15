@@ -1,15 +1,20 @@
 {
-  "name": "nightwatchdemo",
+  "name": "nightwatch-poc",
   "version": "1.0.0",
-  "description": "",
+  "description": "Exploring nightwatch",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "nightwatch -e chrome ./tests --reporter html-reporter.js"
   },
-  "author": "nagesh",
+  "author": "nagesh-mittapalli",
   "license": "ISC",
+  
   "dependencies": {
-    "handlebars": "^4.1.0",
-    "nightwatch": "^1.0.18"
+    "chromedriver": "^75.1.0",
+    "fs": "0.0.1-security",
+    "geckodriver": "^1.16.2",
+    "handlebars": "^4.1.2",
+    "nightwatch": "^1.2.1",
+    "nightwatch-html-reporter": "^2.0.6"
   }
 }
