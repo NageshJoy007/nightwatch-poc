@@ -21,27 +21,27 @@ Go into project folder and run below commands:
 
 1) To run tests using scripts in package.json
 
-`npm test`
+   `npm test`
 
 2) To run your tests by default : on firefox
 
-`nightwatch ./tests`
+   `nightwatch ./tests`
 
 3) To run your tests using specific browser
 
-`nightwatch ./tests -e chrome`   
+   `nightwatch ./tests -e chrome`   
 
 4) To run your tests & generate html reports
 
-`nightwatch -e chrome ./tests --reporter html-reporter.js`
+   `nightwatch -e chrome ./tests --reporter html-reporter.js`
 
 5) To run your tests on two different browsers parallelly
 
-`nightwatch -e chrome,firefox ./tests --reporter html-reporter.js`
+   `nightwatch -e chrome,firefox ./tests --reporter html-reporter.js`
 
 6) To run your tests using specific tag
 
-`nightwatch -e chrome --tag smoke ./tests --reporter html-reporter.js`
+   `nightwatch -e chrome --tag smoke ./tests --reporter html-reporter.js`
 
 ### Output
 
