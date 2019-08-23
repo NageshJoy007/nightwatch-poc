@@ -43,6 +43,11 @@ Go into project folder and run below commands:
 
    `nightwatch -e chrome --tag smoke ./tests --reporter html-reporter.js`
 
+6) You can pass different nightwatch configurations/test settings to your tests run time from cli
+
+   `nightwatch -c ./conf/local.conf.js -e chrome ./tests --reporter html-reporter.js`
+   
+
 ### Output
 
 Reports will generate under tests_output folder
