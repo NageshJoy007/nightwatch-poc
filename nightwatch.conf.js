@@ -3,7 +3,7 @@
  const geckodriver = require('geckodriver');
  module.exports ={
      
-  "src_folders" : ["tests"],
+  "src_folders" : ["tests/sample"],
     "custom_commands_path" : "",
     "custom_assertions_path" : "",
     "page_objects_path" : "",
@@ -33,7 +33,7 @@
             "--log", "debug"
           ]
         },
-        "filter": ["tests"],
+        "filter": ["tests/sample"],
         "desiredCapabilities" : {
           "browserName" : "firefox",
           "acceptInsecureCerts" : true

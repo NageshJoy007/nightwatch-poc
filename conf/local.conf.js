@@ -1,5 +1,5 @@
 nightwatch_config = {
-    src_folders : [ "tests" ],
+    src_folders : [ "tests/sample" ],
   
     webdriver : {
       "start_process": true

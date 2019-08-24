@@ -4,7 +4,7 @@
   "description": "Exploring nightwatch",
   "main": "index.js",
   "scripts": {
-    "test": "nightwatch -e chrome ./tests --reporter html-reporter.js"
+    "test": "nightwatch -e chrome ./tests/sample --reporter html-reporter.js"
   },
   "author": "nagesh-mittapalli",
   "license": "ISC",

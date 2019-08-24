@@ -1,11 +1,20 @@
-# nightwatch-poc
+# nightwatch-poc + BrowserStack
 
 
 ### Waht is Nightwatch ?
 
 [Nightwatch](https://nightwatchjs.org/) is an automated testing framework for web applications and websites, written in Node.js and using the W3C WebDriver API (formerly Selenium WebDriver. It is a complete browser (End-to-End) testing solution which aims to simplify the process of setting up Continuous Integration and writing automated tests.
 
-This is a sample nightwatch project to run your functional tests programmatically.
+<img src ="http://nightwatchjs.org/img/logo-nightwatch.png" height = "110">
+
+### What is BrowserStack ?
+
+BrowserStack is a cloud web and mobile testing platform that enables developers to test their websites and mobile applications across on-demand browsers, operating systems and real mobile devices, without requiring users to install or maintain an internal lab of virtual machines, devices or emulators.
+
+![BrowserStack Logo](https://d98b8t1nnulk5.cloudfront.net/production/images/layout/logo-header.png?1469004780)
+
+
+This is a sample nightwatch project to run your functional tests programmatically on your local and also cloud using BrowserStack.
 
 ### Setup 
 
@@ -25,28 +34,44 @@ Go into project folder and run below commands:
 
 2) To run your tests by default : on firefox
 
-   `nightwatch ./tests`
+   `nightwatch ./tests/sample`
 
 3) To run your tests using specific browser
 
-   `nightwatch ./tests -e chrome`   
+   `nightwatch -e chrome`   
 
 4) To run your tests & generate html reports
 
-   `nightwatch -e chrome ./tests --reporter html-reporter.js`
+   `nightwatch -e chrome --reporter html-reporter.js`
 
 5) To run your tests on two different browsers parallelly
 
-   `nightwatch -e chrome,firefox ./tests --reporter html-reporter.js`
+   `nightwatch -e chrome,firefox --reporter html-reporter.js`
 
 6) To run your tests using specific tag
 
-   `nightwatch -e chrome --tag smoke ./tests --reporter html-reporter.js`
+   `nightwatch -e chrome --tag smoke --reporter html-reporter.js`
 
-6) You can pass different nightwatch configurations/test settings to your tests run time from cli
+7) You can pass different nightwatch configurations/test settings to your tests run time from cli
 
-   `nightwatch -c ./conf/local.conf.js -e chrome ./tests --reporter html-reporter.js`
-   
+   `nightwatch -c ./conf/local.conf.js -e chrome --reporter html-reporter.js`
+
+8) You can run your tests using BrowserStack as below
+
+        - Get your browserstack with automation license
+
+        - Export the environment variables for the Username and Access Key of your BrowserStack account
+            
+             ```   
+                export BROWSERSTACK_USERNAME=<browserstack-username> &&
+                export BROWSERSTACK_ACCESS_KEY=<browserstack-access-key>
+                
+                                                                            ```
+        
+        - Or paste `browserstack-username` and `browserstack-access-key` in `browserstack.conf.js`
+
+        `nightwatch -c ./conf/browserstack.conf.js -e chrome --reporter html-reporter.js`
+
 
 ### Output
 
