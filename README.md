@@ -1,4 +1,4 @@
-# nightwatch-poc + BrowserStack
+# Nightwatch-BrowserStack
 
 
 ### Waht is Nightwatch ?
@@ -9,12 +9,12 @@
 
 ### What is BrowserStack ?
 
-BrowserStack is a cloud web and mobile testing platform that enables developers to test their websites and mobile applications across on-demand browsers, operating systems and real mobile devices, without requiring users to install or maintain an internal lab of virtual machines, devices or emulators.
+[BrowserStack](https://www.browserstack.com/) is a cloud web and mobile testing platform that enables developers to test their websites and mobile applications across on-demand browsers, operating systems and real mobile devices, without requiring users to install or maintain an internal lab of virtual machines, devices or emulators.
 
 ![BrowserStack Logo](https://d98b8t1nnulk5.cloudfront.net/production/images/layout/logo-header.png?1469004780)
 
 
-This is a sample nightwatch project to run your functional tests programmatically on your local and also cloud using BrowserStack.
+This is a sample nightwatch project to run your functional tests programmatically on your local and also on cloud using BrowserStack.
 
 ### Setup 
 
@@ -56,7 +56,7 @@ Go into project folder and run below commands:
 
    `nightwatch -c ./conf/local.conf.js -e chrome --reporter html-reporter.js`
 
-8) You can run your tests using BrowserStack as below
+8) You can run your tests using BrowserStack as below - Nightwatch Integration with BrowserStack
 
     * Get your browserstack account license for automation
 
