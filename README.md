@@ -58,19 +58,18 @@ Go into project folder and run below commands:
 
 8) You can run your tests using BrowserStack as below
 
-        - Get your browserstack with automation license
+    * Get your browserstack account license for automation
 
-        - Export the environment variables for the Username and Access Key of your BrowserStack account
+    * Export the environment variables for the Username and Access Key of your BrowserStack account
             
-             ```   
-                export BROWSERSTACK_USERNAME=<browserstack-username> &&
-                export BROWSERSTACK_ACCESS_KEY=<browserstack-access-key>
-                
-                                                                            ```
+        ```
+        export BROWSERSTACK_USERNAME=<browserstack-username> &&
+        export BROWSERSTACK_ACCESS_KEY=<browserstack-access-key>
+        ```
         
-        - Or paste `browserstack-username` and `browserstack-access-key` in `browserstack.conf.js`
+    * Or paste `browserstack-username` and `browserstack-access-key` in `browserstack.conf.js`
 
-        `nightwatch -c ./conf/browserstack.conf.js -e chrome --reporter html-reporter.js`
+    * `nightwatch -c ./conf/browserstack.conf.js -e chrome --reporter html-reporter.js`
 
 
 ### Output
