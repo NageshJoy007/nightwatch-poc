@@ -1,4 +1,4 @@
-# Nightwatch-BrowserStack
+# Nightwatch-Vrt-BrowserStack
 
 
 ### Waht is Nightwatch ?
@@ -6,6 +6,10 @@
 [Nightwatch](https://nightwatchjs.org/) is an automated testing framework for web applications and websites, written in Node.js and using the W3C WebDriver API (formerly Selenium WebDriver. It is a complete browser (End-to-End) testing solution which aims to simplify the process of setting up Continuous Integration and writing automated tests.
 
 <img src ="http://nightwatchjs.org/img/logo-nightwatch.png" height = "110">
+
+### Waht is Nightwatch-Vrt ?
+
+[Nightwatch](https://www.npmjs.com/package/nightwatch-vrt/) VRT extends nightwatch.js with an assertion that captures a screenshot of a DOM element identified by a selector and compares the screenshot against a baseline screenshot. If the baseline screenshot does not exist, it will be created the first time you run the test and the assertion will pass.
 
 ### What is BrowserStack ?
 
@@ -77,6 +81,16 @@ Go into project folder and run below commands:
    `node scripts/local.runner.js -c conf/browserstack.local.conf.js -e chrome`   Or   `npm run test-bs-local`
     
     * To test on different sets of os, browsers check out our [platform configurator](https://www.browserstack.com/automate/nightwatch#run-tests-on-desktop-mobile)
+
+9) You can run visual regression tests of your application as below
+
+   `nightwatch -e chrome -c ./conf/vrt.conf.js --reporter html-reporter.js`
+
+
+   `nightwatch -e chrome -c ./conf/vrt.bs.conf.js --reporter html-reporter.js`
+
+
+   
 
 ### Output
 

@@ -4,9 +4,11 @@
   "description": "Exploring nightwatch",
   "main": "index.js",
   "scripts": {
-      "test": "nightwatch -e chrome ./tests/sample --reporter html-reporter.js",
-      "test-bs": "nightwatch -c ./conf/browserstack.conf.js -e chrome --reporter html-reporter.js",
-      "test-bs-local": "node scripts/local.runner.js -c conf/browserstack.local.conf.js -e chrome --reporter html-reporter.js"
+    "test": "nightwatch -e chrome ./tests/sample --reporter html-reporter.js",
+    "test-bs": "nightwatch -c ./conf/browserstack.conf.js -e chrome --reporter html-reporter.js",
+    "test-bs-local": "node scripts/local.runner.js -c conf/browserstack.local.conf.js -e chrome --reporter html-reporter.js",
+    "test-vrt": "nightwatch -e chrome -c ./conf/vrt.conf.js --reporter html-reporter.js",
+    "test-vrt-bs": "nightwatch -e chrome -c ./conf/vrt.bs.conf.js --reporter html-reporter.js"
   },
   "repository": {
     "type": "git",
@@ -20,7 +22,11 @@
     "fs": "0.0.1-security",
     "geckodriver": "^1.16.2",
     "handlebars": "^4.1.2",
+    "jimp": "^0.2.28",
+    "lodash": "^4.17.4",
     "nightwatch": "^1.2.1",
-    "nightwatch-html-reporter": "^2.0.6"
+    "nightwatch-html-reporter": "^2.0.6",
+    "nightwatch-vrt": "^0.2.10",
+    "path": "^0.12.7"
   }
 }
