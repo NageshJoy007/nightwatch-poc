@@ -56,7 +56,7 @@ Go into project folder and run below commands:
 
    `nightwatch -c ./conf/local.conf.js -e chrome --reporter html-reporter.js`
 
-8) You can run your tests using BrowserStack as below - Nightwatch Integration with BrowserStack
+8) To run your tests using BrowserStack - Nightwatch Integration with BrowserStack
 
     * Get your browserstack account license for automation
 
@@ -67,14 +67,22 @@ Go into project folder and run below commands:
         export BROWSERSTACK_ACCESS_KEY=<browserstack-access-key>
         ```
         
-    * Or paste `browserstack-username` and `browserstack-access-key` in `browserstack.conf.js`
+    * Or Update `*.conf.js` files inside the `conf/` directory with your `browserstack-username` and `browserstack-access-key`.
 
-    * `nightwatch -c ./conf/browserstack.conf.js -e chrome --reporter html-reporter.js`
 
+        `nightwatch -c ./conf/browserstack.conf.js -e chrome --reporter html-reporter.js`  Or   `npm run test-bs`
+
+    * You can also run your tests for local/internal applications using BrowserStack
+
+        `node scripts/local.runner.js -c conf/browserstack.local.conf.js -e chrome`   Or   `npm run test-bs-local`
+    
+    * To test on different sets of os, browsers check out our [platform configurator](https://www.browserstack.com/automate/nightwatch#run-tests-on-desktop-mobile)
 
 ### Output
 
-Reports will generate under tests_output folder
+    * Reports will generate under tests_output folder
+
+    * You can view your test results on the [BrowserStack automate dashboard](https://www.browserstack.com/automate)
 
 ![Report sample against google.com](nightwatch-report.png)
 

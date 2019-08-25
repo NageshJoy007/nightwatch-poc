@@ -4,12 +4,18 @@
   "description": "Exploring nightwatch",
   "main": "index.js",
   "scripts": {
-    "test": "nightwatch -e chrome ./tests/sample --reporter html-reporter.js"
+    "test": "nightwatch -e chrome ./tests/sample --reporter html-reporter.js",
+    "test-bs": "nightwatch -c ./conf/browserstack.conf.js -e chrome --reporter html-reporter.js",
+    "test-bs-local": "node scripts/local.runner.js -c conf/browserstack.local.conf.js -e chrome --reporter html-reporter.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/NageshJoy007/nightwatch-poc"
   },
   "author": "nagesh-mittapalli",
   "license": "ISC",
-  
   "dependencies": {
+    "browserstack-local": "^1.4.2",
     "chromedriver": "^75.1.0",
     "fs": "0.0.1-security",
     "geckodriver": "^1.16.2",
