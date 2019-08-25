@@ -18,7 +18,7 @@
 ![BrowserStack Logo](https://d98b8t1nnulk5.cloudfront.net/production/images/layout/logo-header.png?1469004780)
 
 
-This is a sample nightwatch project to run your functional tests programmatically on your local and also on cloud using BrowserStack.
+This is a sample nightwatch project to run your functional, visual regression tests programmatically on your local and also on cloud platform using BrowserStack.
 
 ### Setup 
 
