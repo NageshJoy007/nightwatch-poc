@@ -9,7 +9,7 @@
 
 ### Waht is Nightwatch-Vrt ?
 
-[Nightwatch](https://www.npmjs.com/package/nightwatch-vrt/) VRT extends nightwatch.js with an assertion that captures a screenshot of a DOM element identified by a selector and compares the screenshot against a baseline screenshot. If the baseline screenshot does not exist, it will be created the first time you run the test and the assertion will pass.
+[Nightwatch VRT](https://www.npmjs.com/package/nightwatch-vrt/) extends nightwatch.js with an assertion that captures a screenshot of a DOM element identified by a selector and compares the screenshot against a baseline screenshot. If the baseline screenshot does not exist, it will be created the first time you run the test and the assertion will pass.
 
 ### What is BrowserStack ?
 
@@ -94,10 +94,10 @@ Go into project folder and run below commands:
 
 ### Output
 
-    * Reports will generate under tests_output folder
+    * Reports will generate under tests_output folder.
 
 
-    * You can view your test results on the [BrowserStack automate dashboard](https://www.browserstack.com/automate).
+    * You can view your BStack test results on the BrowserStack [Dashboard](https://www.browserstack.com/automate)
 
 ![Report sample against google.com](nightwatch-report.png)
 
