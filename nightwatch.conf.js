@@ -25,7 +25,7 @@
           },
           webdriver: {
             port: 9515,
-            server_path: "node_modules/chromedriver/lib/chromedriver/chromedriver",
+            server_path: "node_modules/chromedriver/bin/chromedriver",
             cli_args: ["--verbose"]
           },
           desiredCapabilities : {
@@ -37,7 +37,7 @@
       chrome : {
         webdriver: {
           port: 9515,
-          server_path: "node_modules/chromedriver/lib/chromedriver/chromedriver",
+          server_path: "node_modules/chromedriver/bin/chromedriver",
           cli_args: ["--verbose"]
         },
         desiredCapabilities : {
