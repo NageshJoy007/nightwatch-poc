@@ -1,6 +1,3 @@
- 
- const chromedriver = require('chromedriver');
- const geckodriver = require('geckodriver');
  module.exports ={
      
   "src_folders" : ["tests/sample"],
@@ -9,11 +6,11 @@
     "page_objects_path" : "",
     "globals_path" : "",
   
-    "webdriver" : {
-      "start_process": true
+    webdriver : {
+      start_process: true
     },
   
-    "test_settings" : {
+    test_settings : {
         
       default : {
         screenshots : {
@@ -28,22 +25,21 @@
           },
           webdriver: {
             port: 9515,
-            server_path: "node_modules/.bin/chromedriver" || "node_modules/chromedriver/lib/chromedriver/chromedriver",
+            server_path: "./node_modules/chromedriver/lib/chromedriver/chromedriver",
             cli_args: ["--verbose"]
           },
           desiredCapabilities : {
             browserName : "chrome",
             loggingPrefs: {"driver": "INFO", "server": "OFF", "browser": "INFO"}
           },
-        filter: ["tests/sample"]
-      },
+          filter: ["tests/sample"]
+        },
       chrome : {
         webdriver: {
           port: 9515,
-          server_path: "node_modules/.bin/chromedriver" || "node_modules/chromedriver/lib/chromedriver/chromedriver",
+          server_path: "./node_modules/chromedriver/lib/chromedriver/chromedriver",
           cli_args: ["--verbose"]
         },
-  
         desiredCapabilities : {
           browserName : "chrome",
           loggingPrefs: {"driver": "INFO", "server": "OFF", "browser": "INFO"}
@@ -64,15 +60,18 @@
       },
 
       firefox: {
-        desiredCapabilities : {
-          browserName : 'firefox',
-          alwaysMatch: {
-            acceptInsecureCerts: true
-          }
-        },
         webdriver: {
-          server_path: "node_modules/.bin/geckodriver" || "node_modules/geckodriver",
-        }
+          server_path: "node_modules/geckodriver/geckodriver",
+            port: 4444,
+            cli_args: [
+              "--log", "debug"
+            ]
+        },
+        desiredCapabilities : {
+          browserName : "firefox",
+          acceptInsecureCerts : true
+        },
+        
       }
 
     }
