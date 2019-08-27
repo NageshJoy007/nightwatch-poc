@@ -4,7 +4,7 @@
   "description": "Exploring nightwatch",
   "main": "index.js",
   "scripts": {
-    "test": "nightwatch -e chrome ./tests/sample --reporter html-reporter.js",
+    "test": "nightwatch -e chromehl ./tests/sample --reporter html-reporter.js",
     "test-bs": "nightwatch -c ./conf/browserstack.conf.js -e chrome --reporter html-reporter.js",
     "test-bs-local": "node scripts/local.runner.js -c conf/browserstack.local.conf.js -e chrome --reporter html-reporter.js",
     "test-vrt": "nightwatch -e chrome -c ./conf/vrt.conf.js --reporter html-reporter.js",
