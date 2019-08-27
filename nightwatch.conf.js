@@ -50,7 +50,7 @@
         webdriver: {
           port: 9515,
           server_path: "node_modules/chromedriver/bin/chromedriver",
-          cli_args: ["--verbose","--headless"]
+          cli_args: ["--verbose","--headless","--no-sandbox"]
         },
         desiredCapabilities : {
           browserName : "chrome",
