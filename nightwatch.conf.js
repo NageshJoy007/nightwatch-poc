@@ -46,6 +46,19 @@
         }
       },
 
+      "chromehl" : {
+        webdriver: {
+          port: 9515,
+          server_path: "node_modules/chromedriver/bin/chromedriver",
+          cli_args: ["--verbose","--headless"]
+        },
+        desiredCapabilities : {
+          browserName : "chrome",
+          loggingPrefs: {"driver": "INFO", "server": "OFF", "browser": "INFO"}
+        }
+      },
+
+
       safari: {
         desiredCapabilities : {
           browserName : 'safari',
