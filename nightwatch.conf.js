@@ -24,13 +24,15 @@
             otherGlobal : "some other value"
           },
           webdriver: {
-            port: 9515,
-            server_path: "node_modules/chromedriver/bin/chromedriver",
-            cli_args: ["--verbose"]
+            server_path: "node_modules/geckodriver/bin/geckodriver",
+              port: 4444,
+              cli_args: [
+                "--log", "debug"
+              ]
           },
           desiredCapabilities : {
-            browserName : "chrome",
-            loggingPrefs: {"driver": "INFO", "server": "OFF", "browser": "INFO"}
+            browserName : "firefox",
+            acceptInsecureCerts : true
           },
           filter: ["tests/sample"]
         },
@@ -91,16 +93,23 @@
 
       firefoxhl: {
         webdriver: {
+          start_process: true,
           server_path: "node_modules/geckodriver/bin/geckodriver",
-            port: 4444,
-            cli_args: ["-headless"]
+          cli_args: ["--log", "debug"]
         },
         desiredCapabilities : {
           browserName : "firefox",
-          acceptInsecureCerts : true
-        },
-        
+          acceptInsecureCerts : true,
+          alwaysMatch: {
+            "moz:firefoxOptions": { args: [ "-headless" ] }
+          }
+
+        }
       }
+
+
+
+      
 
     }
 

@@ -36,7 +36,7 @@ Go into project folder and run below commands:
 
    `npm test`
 
-2) To run your tests by default : on chrome
+2) To run your tests by default : on firefox
 
    `nightwatch ./tests/sample`
 
