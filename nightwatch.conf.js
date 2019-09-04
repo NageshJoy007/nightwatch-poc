@@ -34,6 +34,8 @@
           },
           filter: ["tests/sample"]
         },
+
+
       chrome : {
         webdriver: {
           port: 9515,
@@ -46,7 +48,7 @@
         }
       },
 
-      "chromehl" : {
+      chromehl : {
         webdriver: {
           port: 9515,
           server_path: "node_modules/chromedriver/bin/chromedriver",
@@ -74,11 +76,24 @@
 
       firefox: {
         webdriver: {
-          server_path: "node_modules/geckodriver/geckodriver",
+          server_path: "node_modules/geckodriver/bin/geckodriver",
             port: 4444,
             cli_args: [
               "--log", "debug"
             ]
+        },
+        desiredCapabilities : {
+          browserName : "firefox",
+          acceptInsecureCerts : true
+        },
+        
+      },
+
+      firefoxhl: {
+        webdriver: {
+          server_path: "node_modules/geckodriver/bin/geckodriver",
+            port: 4444,
+            cli_args: ["-headless"]
         },
         desiredCapabilities : {
           browserName : "firefox",
