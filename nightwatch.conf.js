@@ -101,7 +101,7 @@
           browserName : "firefox",
           acceptInsecureCerts : true,
           alwaysMatch: {
-            "moz:firefoxOptions": { args: [ "-headless" ] }
+            "moz:firefoxOptions": { args: [ "-headless", "-safe-mode" ] }
           }
 
         }
